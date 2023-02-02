@@ -32,8 +32,10 @@ explore: data_intelligence_ar {
 }
 
 explore:  data_intelligence_otc{
+  view_name: data_intelligence_otc
 }
 
 explore: Navigation_Bar {
+  view_name: Navigation_Bar
 
 }

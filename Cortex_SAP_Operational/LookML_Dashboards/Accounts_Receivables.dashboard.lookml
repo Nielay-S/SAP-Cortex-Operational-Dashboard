@@ -1,8 +1,9 @@
-- dashboard: accounts_receivable
+- dashboard: cortex_operational_accounts_receivable
   title: "[Cortex Operational] Accounts Receivable"
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
+  preferred_slug: OyJHDlCIZVRu31Gx4p0PEq
   elements:
   - title: Account Receivable by Company
     name: Account Receivable by Company
@@ -10,7 +11,6 @@
     explore: data_intelligence_ar
     type: looker_pie
     fields: [data_intelligence_ar.Company_Name, data_intelligence_ar.Sum_of_Receivables]
-    filters: {}
     sorts: [data_intelligence_ar.Company_Name]
     limit: 500
     dynamic_fields: [{category: measure, expression: '', label: Total Receivable,
@@ -189,7 +189,6 @@
     explore: data_intelligence_ar
     type: single_value
     fields: [data_intelligence_ar.Total_Receivables]
-    filters: {}
     limit: 500
     custom_color_enabled: true
     show_single_value_title: true
@@ -249,7 +248,6 @@
     explore: data_intelligence_ar
     type: single_value
     fields: [data_intelligence_ar.Sum_of_Open_and_Over_Due_Local_Currency]
-    filters: {}
     limit: 500
     custom_color_enabled: true
     show_single_value_title: true
@@ -391,7 +389,6 @@
     explore: data_intelligence_ar
     type: single_value
     fields: [data_intelligence_ar.Total_Doubtful_Receivables]
-    filters: {}
     limit: 500
     custom_color_enabled: true
     show_single_value_title: true
@@ -424,7 +421,6 @@
     explore: data_intelligence_ar
     type: single_value
     fields: [data_intelligence_ar.Total_DSO]
-    filters: {}
     limit: 500
     custom_color_enabled: true
     show_single_value_title: true
@@ -600,7 +596,6 @@
   - name: Overdue Receivable Breakdown
     type: text
     title_text: Overdue Receivable Breakdown
-    subtitle_text: ''
     body_text: ''
     row: 7
     col: 12

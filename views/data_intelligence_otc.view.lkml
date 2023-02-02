@@ -3,7 +3,7 @@
 view: data_intelligence_otc {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: 'supply-chain-twin-349311.sct_cortex_reporting.OrderToCash'
+  sql_table_name: OrderToCash
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -706,7 +706,7 @@ view: data_intelligence_otc {
     value_format: "0.00"
     type: number
     #sql: Round(if(${Local_Currency_Key}={% parameter Currency_Required %}  ,${Rebate_Local_Currency},`@{GCP_PROJECT}`.@{REPORTING_DATASET}.Currency_Conversion( ${Client_ID},${Exchange_Rate_Type} ,${Local_Currency_Key},{% parameter Currency_Required %},${billing_date},${Rebate_Local_Currency})),ifnull(CAST(`@{GCP_PROJECT}`.@{REPORTING_DATASET}.Currency_Decimal({% parameter Currency_Required %}) AS int),2)) ;;
-    sql: Round(if(${Local_Currency_Key}={% parameter Currency_Required %}  ,${Rebate_Local_Currency},supply-chain-twin-349311.sct_cortex_reporting.Currency_Conversion( ${Client_ID},'M',${Local_Currency_Key},{% parameter Currency_Required %},${billing_date_for_billing_index_and_printout_date},${Rebate_Local_Currency})),ifnull(CAST(supply-chain-twin-349311.sct_cortex_reporting}.Currency_Decimal({% parameter Currency_Required %}) AS int),2)) ;;
+    sql: Round(if(${Local_Currency_Key}={% parameter Currency_Required %}  ,${Rebate_Local_Currency},Currency_Conversion( ${Client_ID},'M',${Local_Currency_Key},{% parameter Currency_Required %},${billing_date_for_billing_index_and_printout_date},${Rebate_Local_Currency})),ifnull(CAST(supply-chain-twin-349311.sct_cortex_reporting}.Currency_Decimal({% parameter Currency_Required %}) AS int),2)) ;;
   }
 
   dimension: Tax_Amount_Local_Currency {

@@ -2,7 +2,7 @@
 view: data_intelligence_ar {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: 'supply-chain-twin-349311.sct_cortex_reporting.AccountingDocumentsReceivables'
+  sql_table_name: AccountingDocumentsReceivables
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
